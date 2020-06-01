@@ -24,7 +24,7 @@ header{
 }
 
 #page-home{
-    background: url('../assets/home-background.svg') no-repeat;
+    background: url('home-background.svg') no-repeat;
     height: 100vh;
     background-position: 35vw bottom;
 }
@@ -46,7 +46,7 @@ a{
 }
 
 #page-home .conteudo header a span{
-    background:url('assets/log-in.svg');
+    background:url('log-in.svg');
     width: 20px;
     height: 20px;
     margin-right:5px;
@@ -99,7 +99,7 @@ a{
 }
 #page-home .conteudo main a span::after{
     content:"";
-    background:url('assets/search.svg');
+    background:url('search.svg');
     width: 20px;
     height: 20px;
     margin-right:5px;
