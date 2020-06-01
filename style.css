@@ -1,0 +1,124 @@
+:root{
+    --title-color:#322153;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #f0f0f5;
+    -webkit-font-smoothing:antialiased;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+#page-home{
+    background: url('../assets/home-background.svg') no-repeat;
+    height: 100vh;
+    background-position: 35vw bottom;
+}
+
+#page-home .conteudo{
+    width:90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+    display:flex;
+    font-weight: bold;
+    color:var(--title-color);
+}
+
+#page-home .conteudo header a span{
+    background:url('assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+    margin-right:5px;
+    display: flex;
+}
+
+#page-home main{
+    max-width: 560px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-home main h1{
+    font-size:54px;
+    color:var(--title-color);
+    margin:0px;
+}
+
+#page-home main p{
+    font-size:24px;
+    line-height:38px;
+    margin:24px 0 0 0;
+}
+
+#page-home main a {
+    background: #34cb69;
+    width:300px;
+    border-radius:8px;
+    height:50px;
+    align-items: center;
+    font-weight: bold;
+    color:white;
+    margin:40px auto;
+}
+
+#page-home main a:hover{
+    background: #2fb86e;
+    transition: 400ms;
+}
+
+#page-home .conteudo main a span{
+    width:50px;
+    height:50px;
+    background:rgba(0,0,0,0.08); /*deixa escurecido */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#page-home .conteudo main a span::after{
+    content:"";
+    background:url('assets/search.svg');
+    width: 20px;
+    height: 20px;
+    margin-right:5px;
+}
+
+@media(max-width:480px){
+    #page-home{
+        background-position-x: 70vw; /*a imagem não aparece*/
+    }
+
+    #page-home .conteudo{
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a{
+        position:absolute;
+        bottom: 50px;
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
