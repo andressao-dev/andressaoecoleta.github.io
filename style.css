@@ -105,9 +105,9 @@ a{
     margin-right:5px;
 }
 
-@media(max-width:480px){
+@media(max-width:1024px){
     #page-home{
-        background-position-x: 70vw; /*a imagem não aparece*/
+        background-position-x: 80vw; /*a imagem não aparece*/
     }
 
     #page-home .conteudo{
