@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar um ponto de coleta</title>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style-cadastro.css">
+
+    <script type="text/javascript">
+        function alerta(){
+            alert("O novo ponto de coleta " + document.getElementById("nome").value + " foi cadastrado com sucesso!");
+        }
+    </script>
+
+</head>
+<body>
+
+    <div id="page-cadastro">
+            <header>
+                <img src="logo.svg" alt="Logomarca Ecoleta">
+                <a href="index.html">
+                    <span></span>
+                    Voltar para home</a>  
+            </header>
+
+        <form action="">
+            
+            <h1>Cadastro do ponto de coleta</h1>
+            
+            <fieldset> <!--fieldset é uma div mais organizada-->
+                <legend>
+                    <h2>Dados da entidade</h2>
+                </legend>
+
+                <div class="field">
+                    <label for="name">Nome da entidade</label>
+                    <input type="text" name="name" id="nome" required>
+                </div>
+
+                <div class="field-group"><!--para criar div, é só digitar .nome do div-->
+                    <div class="field">
+                        <label for="address">Endereço</label>  <!--label + input é um jeito mais fácil de organizar formulários-->
+                        <input type="text" name="address" required> <!--basta digitar label+input que a estrutura é preenchida-->
+                    </div>
+                    <div class="field">
+                        <label for="address2">Número/Complemento</label>
+                        <input type="text" name="Address2" required>
+                    </div>
+                </div>
+
+                <div class="field-group"><!--para criar div, é só digitar .nome do div-->
+                    <div class="field">
+                        <label for="state">Estado</label>  <!--label + input é um jeito mais fácil de organizar formulários-->
+                        <select name ="state" required>
+                            <option value=""> Selecione o Estado</option><!--basta digitar label+input que a estrutura é preenchida-->
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" disabled required>
+                            <option value="">Selecione a Cidade</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Itens de coleta</h2>
+                </legend>
+
+                <div class="cards">
+                    <div class="cards-group">
+                        <ul>
+                            <li data-id="lampadas">
+                                <img src="lampadas.svg" alt="Lâmpadas">
+                                <span>Lâmpadas</span>
+                            </li>
+                            <li data-id="baterias">
+                                <img src="baterias.svg" alt="Baterias">
+                                <span>Pilhas e Baterias</span>
+                            </li>
+                            <li data-id = "papelao">
+                                <img src="papeis-papelao.svg" alt="Papelão">
+                                <span>Papéis e Papelão</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cards-group">
+                        <ul>
+                            <li data-id ="eletronicos">
+                                <img src="eletronicos.svg" alt="Eletrônicos">
+                                <span>Resíduos Eletrônicos</span>
+                            </li>
+                            <li data-id="organicos">
+                                <img src="organicos.svg" alt="Orgânicos">
+                                <span>Resíduos Orgânicos</span>
+                            </li>
+                            <li data-id="oleo">
+                                <img src="oleo.svg" alt="Óleo">
+                                <span>Óleo de Cozinha</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <input type="hidden" name="items" value=""> <!-- para add valores no backend-->
+
+            </fieldset>
+
+            <button type="submit" onclick="alerta()">Cadastrar ponto de coleta</button>
+        </form>
+    </div>
+
+    <script src="cadastro.js"></script>
+
+    <script>
+        feather.replace()
+      </script>
+  
+
+    </body>
+
+</html>
