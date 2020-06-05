@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar um ponto de coleta</title>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="modal.css">
+
+    <script type="text/javascript">
+        function pesquisar() {
+          if (document.getElementById("nome").value == "") {
+            alert ("Por favor, diga-nos seu nome.");
+          }
+          else {
+            if (document.getElementById("email").value == ""){
+              alert ("Preencha seu email, por gentileza.");
+            }
+            if (document.getElementById("cidade").value == ""){
+              alert ("Diga-nos a cidade, por gentileza.");
+            }
+          else {
+            alert ("Obrigada por entrar em contato, " + document.getElementById("nome").value + "! Enviaremos os pontos de coleta em breve.");
+          }
+        }
+        }
+        </script>
+
+</head>
+<body>
+
+    <div id="page-cadastro">
+            <header>
+                <img src="logo.svg" alt="Logomarca Ecoleta">
+                <a href="index.html">
+                    <span></span>
+                    Voltar para home</a>  
+            </header>
+
+        <form action="">
+            
+            <h1>Pesquisa de ponto de coleta</h1>
+            
+            <fieldset> <!--fieldset é uma div mais organizada-->
+
+                <div class="field">
+                    <label for="name">Seu nome</label>
+                    <input type="text" name="name" id="nome">
+                </div>
+
+                <div class="field">
+                    <label for="email">Seu email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <input type="text" name="cidade" id="cidade">
+                    </div>
+                </div>
+                <div class="botao">
+                    <input type="button" onclick="pesquisar()" class="button" value="Pesquisar">
+               </div>
+
+            </fieldset>
+           
+        </form>
+    </div>
+  
+
+    </body>
+
+</html>
